@@ -3,8 +3,12 @@
     <!-- Refine list-->
     <nuxt-link class="refine-tag rounded-l" :class="{'active':isNewActive}" to="/new/">Newest</nuxt-link>
     <nuxt-link class="refine-tag" :class="{'active':isPopularActive}" to="/popular/">Popular</nuxt-link>
-    <nuxt-link class="refine-tag" :class="{'active':isPriceRangeActive}" to="/priceRange/">Price Range</nuxt-link>
-    <nuxt-link class="refine-tag" to="/priceRange/?to=20">Gifts Under $20</nuxt-link>
+    <nuxt-link
+      class="refine-tag"
+      :class="{'active':isPriceRangeActive}"
+      to="/priceRange/"
+    >Price Range</nuxt-link>
+    <nuxt-link class="refine-tag" :to="{ path: '/priceRange/', query: { to: '20' }}">Gifts Under $20</nuxt-link>
     <nuxt-link class="refine-tag rounded-r" :class="{'active':isRandomActive}" to="/random/">Random</nuxt-link>
   </div>
 </template>
