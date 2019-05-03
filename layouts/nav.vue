@@ -34,15 +34,16 @@
         <p>HomePage</p>
       </nuxt-link>
       <!-- For Category -->
-      <div
+      <nuxt-link
         class="category"
         v-for="(category, index) in categoryList"
         :key="category.id"
         :class="colorList[index+1]"
+        :to="{'path': '/gifts/' + category.to}"
       >
         <!-- <i class="fas" :class="category.icon"></i> -->
         <p class="m-2">{{category.name}}</p>
-      </div>
+      </nuxt-link>
       <!-- For More -->
       <div class="category" :class="colorList[0]">
         <div class="inline-flex justify-center content-center">
@@ -69,28 +70,33 @@ export default {
       categoryList: [
         {
           id: 1,
-          name: 'Gifts For Male',
-          image: ''
+          name: 'Gifts For Men',
+          image: '',
+          to: 'gifts-for-men'
         },
         {
           id: 2,
-          name: 'Gifts For Female',
-          image: ''
+          name: 'Gifts For Women',
+          image: '',
+          to: 'gifts-for-women'
         },
         {
           id: 3,
           name: 'Gifts For Geeky',
-          image: ''
+          image: '',
+          to: 'gifts-for-geeky'
         },
         {
           id: 4,
-          name: 'Gifts For Kid',
-          image: ''
+          name: 'Gifts For Kids',
+          image: '',
+          to: 'gifts-for-kids'
         },
         {
           id: 5,
           name: 'Gifts For Personalized',
-          image: ''
+          image: '',
+          to: 'gifts-for-personalized'
         }
       ]
     }

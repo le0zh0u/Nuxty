@@ -36,7 +36,7 @@ export default {
 <style lang="sass">
 
 .refine-tag
-  @apply text-grey-darkest font-bold py-2 px-4 no-underline
+  @apply text-grey-darkest no-underline font-bold py-2 px-4 
   
   &:hover
     @apply text-white bg-blue 
